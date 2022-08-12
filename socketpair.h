@@ -1,4 +1,4 @@
-/* socketpair.c
+/* socketpair.h
  * Copyright 2007 by Nathan C. Myers <ncm@cantrip.org>; some rights reserved.
  * This code is Free Software.  It may be copied freely, in original or
  * modified form, subject only to the restrictions that (1) the author is
@@ -22,6 +22,8 @@
  *     of a child process.
  *   add argument make_overlapped
  */
+#ifndef DBD8B746_AC13_4B28_809F_EE96B55A4503
+#define DBD8B746_AC13_4B28_809F_EE96B55A4503
 
 #include <string.h>
 
@@ -109,4 +111,6 @@ int dumb_socketpair(int socks[2], int dummy)
     (void) dummy;
     return socketpair(AF_LOCAL, SOCK_STREAM, 0, socks);
 }
+#endif
+
 #endif
